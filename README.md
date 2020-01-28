@@ -1,1 +1,3 @@
-# lzhu-r.github.io
+# Test website
+
+Creating a website using GitHub pages
