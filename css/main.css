@@ -29,12 +29,23 @@ h2 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
+h3 {
+    font-size: 1.8em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h4 {
+    font-size: 1.5em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
 p {
     font-size: 1.2em;
     font-family: 'Cambria', 'Georgia', 'Serif'; 
     line-height: 1.4em;
     color: #333;
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
