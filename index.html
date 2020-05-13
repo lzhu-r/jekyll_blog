@@ -1,16 +1,37 @@
 ---
 layout: default
-title: Liang Zhu
+title: Home
 ---
 
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url | absolute_url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-<h1>Hi there, welcome to my website!</h1>
-<p>I'm following the guide at 
-    <a href = "http://jmcglone.com/guides/github-pages/"> this link</a> 
-    to make my own GitHub Pages website. This are going to quite basic while I figure out how to use HTML and CSS to make my website beautiful. Hope you like Helvetica and Cambria!
-</p>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-<h2>About Me</h2>
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-<p>I am a Physical Scientist currently employed with Environment and Climate Change Canada in beautiful Halifax, Nova Scotia. My work deals with surface water quality, mainly in Atlantic Canada, though I have experience in a wide range of projects. I do much of my work in the R environment, although I am a beginner at using Git and GitHub to manage my projects. I hope to catalogue some of my work and learning experiences in this website!
-</p>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
