@@ -1,11 +1,12 @@
 # Setup
 title:               lzhu-r
-tagline:             'A place for R projects, and other stuff'
-description:         'Follow Liang as he tries to figure out how to build a personal website'
-url:                 https://lzhu-r.github.io/
+tagline:             'A place for R projects, and sometimes other stuff'
+description:         'Follow along as Liang learns to make a website for his personal projects'
+url:                 https://lzhu-r.github.io
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+excerpt_separator:   <!--more-->
 
 # About/contact
 author:
